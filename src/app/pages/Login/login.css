@@ -1,0 +1,15 @@
+@import "@app/styles/variables.css";
+
+.pf-c-page{
+    --pf-c-page--BackgroundColor: linear-gradient(to top, var(--Dark-Blue), var(--Blue-Light));
+}
+
+/* общая страница регистрации */
+.login-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--Dark-Blue), var(--Blue-Light));
+    height: 100%;
+    width: 100%;
+}

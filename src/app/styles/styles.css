@@ -1,0 +1,214 @@
+@import "./RobotoCondensed/RobotoCondensed.css";
+@import "./UniNeue/UniNeue.css";
+@import "./variables.css";
+
+html, body, #root {
+  height: 100%;
+  min-width: 320px;
+  font-family: "Uni Neue";
+  font-weight: 600;
+}
+
+.pf-c-modal-box > .pf-c-button + *{
+  margin-right: 4rem;
+}
+
+/* отмены красной обводки импута (в Mozilla Firefox это заложено, нужно было отменить) */
+input {
+  outline:none;
+}
+
+/* кнопки форматa primary */
+.pf-c-button.pf-m-primary{
+  background-color: var(--Dark-Blue);
+  transition: 250ms;
+}
+
+.pf-c-button.pf-m-primary:hover{
+  background-color: var(--Blue-Light);
+  transition: 250ms;
+}
+
+/* кнопки форматa secondary */
+.pf-c-button.pf-m-secondary {
+  --pf-c-button--after--BorderColor: var(--Dark-Blue);
+  color: var(--Dark-Blue);
+  transition: 250ms;
+}
+
+.pf-c-button.pf-m-secondary:hover{
+  --pf-c-button--m-secondary--Color: var(--Blue-Light);
+  --pf-c-button--after--BorderColor: var(--Blue-Light);
+  color: var(--Blue-Light);
+  transition: 250ms;
+}
+
+.pf-c-button.pf-m-secondary:focus{
+  --pf-c-button--m-secondary--Color: var(--Dark-Blue);
+  --pf-c-button--after--BorderColor: var(--Dark-Blue);
+  color: var(--Dark-Blue);
+  transition: 250ms;
+}
+
+/* кнопки форматa secondary danger */
+.pf-c-button.pf-m-danger.pf-m-secondary{
+  color: var(--Red);
+  --pf-c-button--m-danger--Color: var(--Red);
+  --pf-c-button--after--BorderColor: var(--Red);
+  transition: 250ms;
+}
+
+.pf-c-button.pf-m-danger.pf-m-secondary:hover{
+  color: var(--Coral);
+  --pf-c-button--m-danger--Color: var(--Coral);
+  --pf-c-button--after--BorderColor: var(--Coral);
+  transition: 250ms;
+}
+
+.pf-c-button.pf-m-danger:hover{
+  color: var(--Coral);
+  --pf-c-button--m-danger--Color: var(--Coral);
+  --pf-c-button--after--BorderColor: var(--Coral);
+  transition: 250ms;
+}
+
+/* кнопки форматa link */
+.pf-c-button.pf-m-link{
+  color: var(--Dark-Blue);
+}
+
+/* html элемент */
+a{
+  color: var(--Blue-Light);
+}
+
+/* дропдаун */
+.pf-c-dropdown{
+  --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--Blue-Light);
+  --pf-c-dropdown__toggle--hover--before--BorderBottomColor: var(--Blue);
+  --pf-c-dropdown__toggle--focus--before--BorderBottomColor: var(--Blue);
+  --pf-c-dropdown__toggle--active--before--BorderBottomColor: var(--Blue);
+  --pf-c-dropdown__toggle--m-primary--BackgroundColor: var(--Blue-Light);
+}
+
+/* селект переключатель */
+.pf-c-select__toggle::before{
+  border-color: var(--Grey-Middle) var(--Grey-Middle) var(--Blue-Light) var(--Grey-Middle);
+  border-radius: 4px;
+}
+
+/* экшионы в карточке */
+.pf-c-card__actions > * + *{
+  margin-left: 0;
+}
+
+/* селект галочка */
+.pf-c-select__menu-item-icon{
+  color: var(--Blue-Light);
+}
+
+/* контроллер ввода */
+.pf-c-form-control{
+  border: 1px solid var(--Grey);
+  border-radius: 4px;
+  margin: 7px 0 15px 0;
+}
+
+.pf-c-form-control:hover{
+  border: 1px solid var(--Blue-Light);
+  border-bottom: 1px solid var(--Blue-Light);
+  transition: 250ms;
+}
+
+.pf-c-form-control:focus{
+  border: 1px solid var(--Blue-Light);
+  border-bottom: 2px solid var(--Blue-Light);
+}
+
+/* кнопки управления */
+.pf-c-button.pf-m-control{
+  margin: 7px 10px 15px 10px;
+  --pf-c-button--BorderRadius: 5px;
+}
+
+.pf-c-button.pf-m-control:focus{
+  --pf-c-button--m-control--after--BorderBottomColor: var(--Blue-Light);
+}
+
+.pf-c-button.pf-m-control:hover{
+  --pf-c-button--after--BorderColor: var(--pf-c-button--m-control--after--BorderTopColor) var(--pf-c-button--m-control--after--BorderTopColor) var(--Blue-Light) var(--pf-c-button--m-control--after--BorderLeftColor);
+}
+
+/* свитч */
+.pf-c-switch__input:checked ~ .pf-c-switch__toggle{
+  background-color: var(--Dark-Blue);
+}
+
+.pf-c-switch__input:focus ~ .pf-c-switch__toggle{
+  outline: var(--pf-c-switch__input--focus__toggle--OutlineWidth) solid var(--Dark-Blue);
+}
+
+/* селектор шапка таблицы */
+.pf-c-table__sort.pf-m-selected .pf-c-table__button{
+  --pf-c-table__sort-indicator--Color: var(--Blue);
+  color: var(--Blue);
+}
+
+/* nav */
+.pf-c-nav{
+  --pf-c-nav__link--m-current--after--BorderColor: var(--Blue-Light);
+}
+
+.pf-c-tabs__item.pf-m-current{
+  --pf-c-tabs__link--after--BorderColor: var(--Blue);
+}
+
+.pf-c-nav__link, .pf-c-nav__link:hover, .pf-c-nav__link:focus, .pf-c-nav__link:active{
+  transition: 250ms;
+}
+
+/* кнопка сортировки в таблице */
+.pf-c-table__sort-indicator{
+  transition: 250ms;
+}
+
+/* кнопка крестика */
+.pf-c-button.pf-m-plain{
+  transition: 250ms;
+}
+
+/* drawer заполнитель контентом */
+.pf-c-drawer__content{
+  background-color: var(--Grey-Light);
+}
+
+/* таблица */
+.pf-c-table{
+  --pf-c-table--BackgroundColor: transparent;
+}
+
+/* спиннер загрузки */
+.pf-c-spinner{
+  --pf-c-spinner--Color: var(--Blue-Light);
+}
+
+/* мульти-дропдаун */
+.pf-m-expanded > .pf-c-context-selector__toggle::before{
+  --pf-c-context-selector__toggle--BorderBottomColor: var(--Blue-Light);
+}
+
+.pf-c-context-selector__toggle{
+  --pf-c-context-selector__toggle--hover--BorderBottomColor: var(--Blue-Light);
+  --pf-c-context-selector__toggle--active--BorderBottomColor: var(--Blue-Light);
+}
+
+/* subnav */
+.pf-c-nav__subnav{
+  --pf-c-nav__link--m-current--after--BorderColor: var(--Blue-Light);
+}
+
+/* текстовой ввод */
+.pf-c-text-input-group{
+  --pf-c-text-input-group--hover__text--after--BorderBottomColor: var(--Blue-Light);
+  --pf-c-text-input-group__text--focus-within--after--BorderBottomColor: var(--Blue-Light);
+}

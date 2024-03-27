@@ -1,0 +1,121 @@
+@import "@app/styles/variables.css";
+
+/* наполнение сарточки */
+.pf-c-card__body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    font-weight: 700;
+    font-size: medium;
+    font-style: normal;
+}
+
+/* dropdown */
+.pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    --pf-c-dropdown__toggle--PaddingRight: 0;
+    --pf-c-dropdown__toggle--PaddingLeft: 0;
+}
+
+/* разделяющая линия (divider) */
+.pf-c-divider::after{
+    background-color: var(--White);
+}
+
+/* Ошибка */
+.danger{
+    color: var(--White);
+    background-color: var(--Red);
+}
+
+.danger .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    color: var(--White);
+    transition: 150ms;
+}
+
+.danger .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text):hover{
+    color: var(--Grey-Middle);
+    transition: 150ms;
+}
+
+/* Пусто */
+.empty{
+    color: var(--Black);
+    background-color: rgb(255, 255, 255);
+}
+
+.empty .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    color: var(--Black);
+    transition: 150ms;
+}
+
+.empty .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text):hover{
+    color: var(--Grey-Middle);
+    transition: 150ms;
+}
+
+/* Завершено */
+.success{
+    color: var(--White);
+    background-color: var(--Green);
+}
+
+.success .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    color: var(--White);
+    transition: 150ms;
+}
+
+.success .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text):hover{
+    color: var(--Grey-Middle);
+    transition: 150ms;
+}
+
+/* Действие */
+.loading{
+    color: var(--White);
+    background-color: rgb(255, 196, 0);
+}
+
+.loading .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    color: var(--White);
+    transition: 150ms;
+}
+
+.loading .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text):hover{
+    color: var(--Grey-Middle);
+    transition: 150ms;
+}
+
+/* Не отвечает */
+.info{
+    color: var(--White);
+    background-color: rgb(0, 132, 255);
+}
+
+.info .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    color: var(--White);
+    transition: 150ms;
+}
+
+.info .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text):hover{
+    color: var(--Grey-Middle);
+    transition: 150ms;
+}
+
+/* Не отвечает */
+.none{
+    color: var(--White);
+    background-color: rgb(124, 124, 124);
+}
+
+.none .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text){
+    color: var(--White);
+    transition: 150ms;
+}
+
+.none .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text):hover{
+    color: var(--Grey-Middle);
+    transition: 150ms;
+}

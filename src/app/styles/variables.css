@@ -1,0 +1,23 @@
+:root {
+     /* Фирменная цветовая палитра */
+
+    --Dark-Blue: #005869;
+    --Blue: #006174;
+    --Blue-Light: #3FABA9;
+    --Green: #49B487;
+    --Dark-Green: #4A7F68;
+    --White: #ffffff;
+    --Grey: rgb(74, 74, 73);
+    --Black: #000000;
+    --Grey-Middle: rgb(74, 74, 73, 0.5);
+    --Grey-Light: rgb(74, 74, 73, 0.03);
+
+     /* Вспомогательная цветовая палитра */
+
+    --Dark-Red: #751400;
+    --Dark-Cold-Red: #7C1B3A;
+    --Red: #be1600;
+    --Coral: #F08482;
+    --Blue-Grey: #6C8A99;
+    --Violet-Light: #787FBD;
+}

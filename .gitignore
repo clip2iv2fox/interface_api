@@ -1,0 +1,25 @@
+**/node_modules
+dist
+yarn-error.log
+yarn.lock
+stats.json
+coverage
+storybook-static
+.DS_Store
+.idea
+.env
+package-lock.json
+
+.vscode/*
+!.vscode/tasks.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# ignore config web app
+src/config.json
+
