@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import CardStack from './components/CardStack'
 import { Bullseye, Flex, FlexItem, Page, Spinner, Split, SplitItem} from '@patternfly/react-core';
-import { LogModal } from './components/LogModal';
 import { useLocation } from 'react-router-dom';
 import { Stand, Tests, Tests_server } from '@app/types/Types';
 import { get_id, get_rows, get_time } from '@app/configs/Axios_configs';
-import { connect, init, sendMessage } from '@app/configs/webSocket_configs';
 
 const DashBoard_page = () => {
     const [time, setTime] = useState<string>("");                           // время последнего обновления данных
@@ -131,19 +129,7 @@ const DashBoard_page = () => {
 
     // открытие модального окна логов
     const openModal = (flag: boolean, card: Tests) => {
-        console.log("button")
-        setCardLogs(card)
-        setIsModalOpen(flag)
-        init()
-        console.log("init")
-        connect()
-        console.log("connect")
 
-        setTimeout(() => {
-            console.log("sendMessage")
-            logs.push(sendMessage("{\"command\": \"add me to local broadcast via prev data\"}"))
-        }, 1000); // 3000 миллисекунд (3 секунды)
-        console.log(logs)
 
     }
 
@@ -210,7 +196,6 @@ const DashBoard_page = () => {
 
     return (
         <Page>
-            <LogModal isModalOpen={isModalOpen} closeModal={(flag) => setIsModalOpen(flag)} card={logsCard}/>
             {loadingStand && loadingDevices ?
                 <Flex justifyContent={{ default: "justifyContentCenter" }}>
                     <Bullseye style={{marginTop: "15%"}}>
